@@ -1,0 +1,34 @@
+.slider-container {
+    width: 100%;
+    /* max-width: 800px; */
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.awssld__content{
+    background-color: transparent !important;
+}
+.aws-btn {
+
+    --slider-height-percentage: 20%;
+    --slider-transition-duration: 700ms;
+    --organic-arrow-thickness: 3px;
+    --organic-arrow-border-radius: 3px;
+    --organic-arrow-height: 33px;
+    --organic-arrow-color: #538bd5;
+    --control-button-width: 8%;
+    --control-button-height: 29%;
+    --control-button-background: transparent;
+    --control-bullet-color: #62a4fa;
+    --control-bullet-active-color: #538bd5;
+    --loader-bar-color: #aa2222;
+    --loader-bar-height: 6px;
+}

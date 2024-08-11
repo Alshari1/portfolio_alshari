@@ -4,7 +4,7 @@ import { useCallback, useMemo } from 'react';
 import { loadSlim } from 'tsparticles-slim';
 
 const ParticlesBackground = () => {
-    console.log('particles background', particlesOptions)
+    // console.log('particles background', particlesOptions)
     const options = useMemo(() => {
         return {}
     }, [])
