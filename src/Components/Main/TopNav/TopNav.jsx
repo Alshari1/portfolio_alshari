@@ -5,7 +5,7 @@ const TopNav = ({handleSideNav}) => {
         <nav className='flex justify-between p-5 text-xl lg:hidden'>
             <div>
                 <img src="" alt="" />
-                <p>Jaheda</p>
+                <p>Alshari</p>
             </div>
             <div onClick={handleSideNav}>
                 <FontAwesomeIcon icon={faList}></FontAwesomeIcon>

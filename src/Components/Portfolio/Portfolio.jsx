@@ -11,16 +11,19 @@ const Portfolio = () => {
   const [info, setInfo] = useState(null)
   const navigate = useNavigate()
   useEffect(() => {
-    fetch('https://portfolio-jaheda-server.vercel.app/portfolio')
+    fetch('http://localhost:5000/portfolio')
       .then(res => res.json())
       .then(data => {
+        // console.log(data)
         setInfo(data)
       })
-      .catch(err => {})
+      .catch(err => {
+        console.log(err)
+      })
   }, [])
 
   const handleDelete = id => {
-    fetch(`https://portfolio-jaheda-server.vercel.app/portfolio/${id}`, {
+    fetch(`http://localhost:5000/portfolio/${id}`, {
       method: 'DELETE'
     })
       .then(res => res.json())
@@ -53,7 +56,7 @@ const Portfolio = () => {
   }
   return (
     <div id="portfolio">
-      <div className="flex flex-wrap justify-center gap-8 ">
+      <div className="flex flex-wrap justify-center gap-5 ">
         {
           info && info.map(data => <Cart
             key={data._id}

@@ -14,7 +14,7 @@ const Inventory = () => {
     const { logout } = useContext(AuthContext)
 
     const handleConfirm = id => {
-        fetch(`https://portfolio-jaheda-server.vercel.app/clients/${id}`, {
+        fetch(`http://localhost:5000/clients/${id}`, {
             credentials: 'include',
             method: 'PATCH',
             headers: {
@@ -67,7 +67,7 @@ const Inventory = () => {
             reverseButtons: true
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`https://portfolio-jaheda-server.vercel.app/clients/${id}`, {
+                fetch(`http://localhost:5000/clients/${id}`, {
                     credentials: 'include',
                     method: 'DELETE'
                 })

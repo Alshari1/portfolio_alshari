@@ -16,7 +16,7 @@ const Cart = ({ data, handleDelete }) => {
     const handleLove = (id) => {
         const updatedText = document.getElementById(_id).innerText;
         // console.log(heartCount, _id)
-        fetch(`https://portfolio-jaheda-server.vercel.app/portfolio/${id}`, {
+        fetch(`http://localhost:5000/portfolio/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
@@ -48,7 +48,7 @@ const Cart = ({ data, handleDelete }) => {
     return (
         <div style={{ width: '21rem' }} className="relative flex flex-col flex-wrap space-y-5 bg-[#151b2b] shadow-xl border border-[#232935] rounded-lg pb-3 text-white">
             <figure className="p-5 ">
-                <img className=" rounded-lg max-h-56 w-full" src={thumbnailUrl} alt="image" />
+                <img className=" rounded-lg h-56 w-full" src={thumbnailUrl} alt="image" />
             </figure>
             <div className="flex justify-between m-2">
                 <p>DEVELOPMENT</p>

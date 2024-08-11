@@ -20,7 +20,7 @@ const ContactForm = () => {
         const clientInfo = { name, email, demoUrl, object, description, websiteType, pages, budget, timeSpan, date }
         // console.log(clientInfo)
 
-        fetch('https://portfolio-jaheda-server.vercel.app/clients', {
+        fetch('http://localhost:5000/clients', {
             credentials: 'include',
             method: 'POST',
             headers: {

@@ -11,12 +11,18 @@ import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import DialogTitle from '@mui/material/DialogTitle';
 import Swal from 'sweetalert2';
+import { FaLinkedin } from "react-icons/fa";
+import fivericon from '../../assets/10813996_fiverr_icon.svg';
+import upworkIcon from '../../assets/1929180_upwork_icon.svg';
+import linkedInIcon from '../../assets/icons8-linkedin.svg';
+// import { useNavigate } from 'react-router-dom';
 
 const SideNav = ({ show, setShow }) => {
     const { user, googleSignIn, logout } = useContext(AuthContext);
     const [open, setOpen] = useState(false);
     const [adminInput, setAdminInput] = useState('');
-// console.log( adminInput)
+    // const navigate = useNavigate()
+    // console.log( adminInput)
 
     const handleClose = () => {
         setOpen(false);
@@ -39,20 +45,20 @@ const SideNav = ({ show, setShow }) => {
                 timer: 3000,
                 timerProgressBar: true,
                 customClass: {
-                    container: 'custom-toast-error',        
+                    container: 'custom-toast-error',
                 },
                 didOpen: (toast) => {
                     toast.onmouseenter = Swal.stopTimer;
                     toast.onmouseleave = Swal.resumeTimer;
                 }
             });
-            
+
             Toast.fire({
                 icon: "error",
                 title: "Unauthorized"
             });
-            
-            
+
+
         }
     };
 
@@ -117,7 +123,23 @@ const SideNav = ({ show, setShow }) => {
                 {
                     !user ? <a onClick={() => setOpen(true)}><span><FontAwesomeIcon icon={faCrown} /></span>ADMIN ?</a> : <span onClick={handleLogout} className="text-end pr-5 hover:cursor-pointer lg:pr-10"><FontAwesomeIcon onClick={handleLogout} icon={faRightFromBracket} /></span>
                 }
+                <hr />
+                {/* <p>Visite my social profile -</p> */}
+                <div className="flex justify-around">
+
+                    <div className="text-3xl p-3 rounded-lg border border-[#2b3744] bg-slate-900 w-fit hover:cursor-pointer">
+                        {/* <FaLinkedin className=''/> */}
+                        <img className=" bg-white h-7 rounded" src={linkedInIcon} alt="" />
+                    </div>
+                    <div onClick={() => {window.location.href = 'https://www.fiverr.com/alsharia?public_mode=true'}} className="text-4xl p-3 rounded-lg border border-[#2b3744] bg-slate-900 w-fit  hover:cursor-pointer">
+                        <img className=" bg-white h-7 rounded" src={fivericon} alt="" />
+                    </div>
+                    <div className="text-4xl p-3 rounded-lg border border-[#2b3744] bg-slate-900 w-fit  hover:cursor-pointer">
+                        <img className="bg-white h-7 rounded" src={upworkIcon} alt="" />
+                    </div>
+                </div>
             </div>
+            {/* https://www.fiverr.com/alsharia?public_mode=true */}
         </>
     );
 };

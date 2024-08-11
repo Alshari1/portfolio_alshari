@@ -26,7 +26,7 @@ export  const router = createBrowserRouter([
    {
       path:'/inventory',
       element:<Inventory></Inventory>,
-      loader:() => fetch('https://portfolio-jaheda-server.vercel.app/clients')
+      loader:() => fetch('http://localhost:5000/clients')
    },
    {
       path:'/error',

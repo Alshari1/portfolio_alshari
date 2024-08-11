@@ -1,15 +1,17 @@
 const Skills = () => {
     return (
         <div className="skills-container">
-            <div>Bootstrap 4 expert</div>
-            <div>Javascript Developer</div>
-            <div>Wordpress expert</div>
-            <div>JQuery expert</div>
-            <div>Website designer</div>
-            <div>Html5 expert</div>
-            <div>Wix expert</div>
-            <div>Shopify expert</div>
-            <div>Website customization expert</div>
+            <div>HTML & CSS</div>
+            <div>Bootstrap & Tailwind CSS</div>
+            <div>Daisy UI</div>
+            <div>Material UI & Ant Design</div>
+            <div>Node.js & RESTful API</div>
+            <div>Database Managment</div>
+            <div>Authentication & Authorization</div>
+            <div>Payment Gateway Integration</div>
+            <div>Responsive Design</div>
+            <div>Search Engine Optimization</div>
+            <div>Content Management Systems</div>
             
         </div>
     );

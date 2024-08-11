@@ -24,7 +24,7 @@ const Add = ({ value, singleData }) => {
         const data = { thumbnailUrl, portfolioUrl, title, description, priceFrom, priceTo, industries, durationFrom, durationTo, date, heartCount }
         // console.log(data)
 
-        fetch('https://portfolio-jaheda-server.vercel.app/portfolio', {
+        fetch('http://localhost:5000/portfolio', {
             credentials: 'include',
             method: 'POST',
             headers: {
@@ -34,6 +34,7 @@ const Add = ({ value, singleData }) => {
         })
             .then(res => res.json())
             .then(data => {
+                // console.log(data)
                 if (data.acknowledged) {
                     const Toast = Swal.mixin({
                         toast: true,
@@ -107,7 +108,7 @@ const Add = ({ value, singleData }) => {
         const date = moment(new Date()).format("MMM Do YY");
         const data = { thumbnailUrl, portfolioUrl, title, description, priceFrom, priceTo, industries, durationFrom, durationTo, date }
         // console.log(data)
-        fetch(`https://portfolio-jaheda-server.vercel.app/portfolio/${id}`, {
+        fetch(`http://localhost:5000/portfolio/${id}`, {
             credentials: 'include',
             method: 'PUT',
             headers: {

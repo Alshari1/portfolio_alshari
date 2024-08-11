@@ -18,7 +18,7 @@ const Pricing = () => {
                 <div className="card-front">
                     <div className="space-y-5 border border-[#2b3744] h-[693px] p-6 rounded-lg text-justify text-white">
                         <h1 className="mb-3 text-3xl font-medium dark:text-gray-400">Contact info</h1>
-                        <p><span className="text-3xl text-[#fec544]">Greetings</span>, I'm a Professional Front-end Developer and CMS(Wix, WordPress, Shopify, Squarespace) Expert. I can configuration, make, upgrade, Customize, deal with different kinds of websites by Cms or custom coding. I have done numerous activities with incredible accomplishments. Customer Satisfaction is the principal thing for me.</p>
+                        <p><span className="text-3xl text-[#fec544]">Greetings</span>, I'm a Professional Front-end Developer with expertise in HTML, CSS, Bootstrap, Tailwind, Daisy UI, React, React-Bootstrap, Node.js, Material UI, Ant UI, and RESTful APIs. I excel in backend integration, MongoDB, authentication and authorization, JWT, and payment gateway integration. Additionally, I specialize in creating responsive designs and working with CMS platforms like Wix. I have successfully completed numerous projects with great results. Customer satisfaction is my top priority, and I am dedicated to delivering exceptional work tailored to your needs.</p>
                         <p className="text-justify">We'd love to hear from you! Whether you have questions, feedback, or need assistance, our team is here to help. You can reach us through the following methods :</p>
                         <div className="flex flex-row items-center gap-5" >
                             <div className=" p-2 text-2xl">
@@ -47,8 +47,8 @@ const Pricing = () => {
                                 <p>Chattogram, Bangladesh</p>
                             </div>
                         </div>
-                        <p>Visite my social profile and get connected -</p>
-                        <div>
+                        {/* <p>Visite my social profile and get connected -</p> */}
+                        {/* <div>
                             <div className="flex justify-around lg:px-28">
                                 <div className="text-3xl p-3 rounded-lg border border-[#2b3744] bg-slate-900 w-fit">
                                     <FaLinkedin />
@@ -60,7 +60,7 @@ const Pricing = () => {
                                     <img className="bg-white h-7 rounded" src={upworkIcon} alt="" />
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <div className="card-back">

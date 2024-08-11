@@ -7,7 +7,7 @@ const PortfolioDetails = () => {
     const navigate = useNavigate()
     const id = localStorage.getItem('details-cart')
     useEffect(() => {
-        fetch(`https://portfolio-jaheda-server.vercel.app/portfolio/${id}`)
+        fetch(`http://localhost:5000/portfolio/${id}`)
             .then(res => res.json())
             .then(data => {
                 setInfo(data)
@@ -19,11 +19,11 @@ const PortfolioDetails = () => {
         navigate('/')
     }
     return (
-        <div className="flex text-white" style={{ height: '100vh' }}>
-            <div className="bg-slate-800 w-1/2 flex justify-center items-center px-10 relative overflow-y-auto ">
-                <img className="w-full border rounded-lg" src={portfolioUrl} alt="" />
+        <div className="flex flex-col-reverse lg:flex-row text-white" style={{ height: '100vh' }}>
+            <div className="bg-slate-800 w-full lg:w-1/2  lg:px-10 relative overflow-y-auto ">
+                <img className="w-full rounded-lg" src={portfolioUrl} alt="" />
             </div>
-            <div className=" flex flex-col justify-center text-justify w-1/2 bg-gray-800 p-5 space-y-10 ">
+            <div className=" flex flex-col justify-center text-justify w-full lg:w-1/2 bg-gray-800 p-5 space-y-10 ">
                 <p className="text-[#fec544]">From: {date}</p>
                 <h1 className="text-5xl font-bold">{title}</h1>
                 <h2 className="text-xl">{description}</h2>
